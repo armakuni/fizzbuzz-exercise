@@ -1,0 +1,32 @@
+[tool.pytest.ini_options]
+markers = [
+  "fizz: Only run tests marked as 'fizz'",
+  "buzz: Only run tests marked as 'buzz'",
+  "fizzbuzz: Only run tests marked as 'fizzbuzz'"
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+ignore = ["E203"]
+
+[tool.poetry]
+name = "fizzbuzz-exercise"
+version = "0.1.0"
+description = ""
+authors = ["Sam Bryant <sam.bryant@fil.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+pytest = "^7.1.2"
+Flake8-pyproject = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
